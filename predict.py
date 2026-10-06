@@ -1,9 +1,3 @@
-"""Classify messages with the trained model.
-
-Usage:
-    python predict.py "You won a free prize, click now!"
-    python predict.py            # interactive mode
-"""
 import sys
 import joblib
 
@@ -15,7 +9,7 @@ def classify(text: str):
     clf = model.named_steps["clf"]
     if hasattr(clf, "predict_proba"):
         conf = model.predict_proba([text])[0][1]
-    else:  # LinearSVC: squash decision score into 0-1
+    else: 
         import math
         conf = 1 / (1 + math.exp(-model.decision_function([text])[0]))
     return ("SPAM" if label == 1 else "HAM"), conf
