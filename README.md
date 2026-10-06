@@ -7,9 +7,9 @@ The best model (by spam F1-score) is saved automatically.
 ## Setup
 ```bash
 pip install -r requirements.txt
-python train.py          # downloads data, trains, evaluates, saves spam_model.joblib
+python train.py          
 python predict.py "Congratulations! You won a free prize, click now"
-python predict.py        # interactive mode
+python predict.py       
 ```
 
 ## How it works
