@@ -1,4 +1,3 @@
-"""Train, compare and save the best spam classifier."""
 import joblib
 import matplotlib
 matplotlib.use("Agg")
