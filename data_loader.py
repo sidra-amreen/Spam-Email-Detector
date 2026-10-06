@@ -1,4 +1,3 @@
-"""Loads the spam dataset (downloads the SMS Spam Collection, falls back to a tiny built-in sample)."""
 import os
 import urllib.request
 import pandas as pd
